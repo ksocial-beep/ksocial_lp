@@ -19,7 +19,66 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', sans-serif; background-color: var(--dark); color: var(--light); line-height: 1.6; scroll-behavior: smooth; }
 
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 10%; background: rgba(15, 23, 42, 0.9); backdrop-filter: blur(15px); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #1e293b; }
+        /* --- Navigation Bar Rules --- */
+nav { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 1rem 10%; 
+    background: rgba(15, 23, 42, 0.95); 
+    backdrop-filter: blur(15px); 
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+    border-bottom: 1px solid rgba(16, 185, 129, 0.2); 
+}
+
+/* --- Logo Size Rule (INCREASED SIZE) --- */
+.logo-img { 
+    height: 100px; /* Change this number to make the logo even bigger or smaller */
+    width: auto; 
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* --- Menu Link Rules --- */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem; /* Space between menu items */
+}
+
+.nav-links a:not(.btn-primary) { 
+    color: #94a3b8; 
+    text-decoration: none; 
+    font-weight: 600; 
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 5px 0;
+}
+
+/* The Green Underline Animation */
+.nav-links a:not(.btn-primary)::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:not(.btn-primary):hover { 
+    color: var(--primary); 
+}
+
+.nav-links a:not(.btn-primary):hover::after {
+    width: 100%;
+}
         .logo-container { display: flex; align-items: center; gap: 10px; }
         .logo-img { height: 40px; width: auto; }
         .logo-text { font-size: 1.5rem; font-weight: 800; color: var(--primary); letter-spacing: -1px; }
@@ -85,18 +144,20 @@
         <i data-lucide="message-circle" size="32"></i>
     </a>
 
-    <nav>
-        <div class="logo-container">
-            <img src="Ksocial Transparent Logo.png" alt="Ksocial Logo" class="logo-img" size="35">
-            <span class="logo-text">KSOCIAL</span>
-        </div>
-        <div class="nav-links">
-            <a href="#services">Services</a>
-            <a href="#results">Performance</a>
-            <a href="#trainings">Trainings</a>
-            <a href="#contact" class="btn btn-primary" style="padding: 0.6rem 1.5rem;">Discovery Call</a>
-        </div>
-    </nav>
+  <nav>
+    <div class="logo-container">
+        <img src="Logo Ksocial Png.png" alt="Ksocial Logo" class="logo-img">
+    </div>
+    
+    <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#results">Performance</a>
+        <a href="#trainings">Trainings</a>
+        <a href="#contact" class="btn btn-primary" style="padding: 0.8rem 2rem; border-radius: 50px;">
+            Discovery Call
+        </a>
+    </div>
+</nav>
 
     <section class="hero">
         <h1>Growth Through <span>Results.</span> Not Vanity Metrics.</h1>
@@ -476,4 +537,5 @@
 </body>
 
 </html>
+
 
