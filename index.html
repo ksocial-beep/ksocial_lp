@@ -136,6 +136,24 @@ nav {
         @media (max-width: 1024px) {
             .chart-section { grid-template-columns: 1fr; }
         }
+
+		/* Container for the CTA buttons */
+	.cta-button-group {
+    display: flex;
+    flex-direction: column; /* Stacks buttons on top of each other */
+    align-items: center;    /* Centers them horizontally */
+    gap: 1.5rem;            /* Adds a consistent gap between buttons */
+    margin-top: 2rem;       /* Adds space above the group */
+    width: 100%;            /* Ensures it spans the container width */
+	}
+
+	/* Styling specifically for the buttons to ensure they look uniform */
+	.cta-button-group .btn {
+    width: 100%;            /* Makes them full width for mobile-friendliness */
+    max-width: 400px;       /* Limits the width so they don't look too stretched */
+    text-align: center;
+	}
+		
     </style>
 </head>
 <body>
@@ -507,12 +525,14 @@ nav {
 				 <input type="email" name="email" placeholder="Work Email" required>
                 <select name="objective"><option value="crowdfunding">Crowdfunding</option><option value="sme">SME Growth</option></select><option value="sme">Creative Content</option></select>
                 <textarea name="message" rows="4" placeholder="Describe your growth bottleneck..." required></textarea>
-                <button type="submit" class="btn btn-primary" style="width: 100%;">Apply for Strategy Session</button>
+            <div class="cta-button-group">
+    			<button type="submit" class="btn btn-primary">Apply for Strategy Session</button>
 				
-				<a href="https://wa.me/601153989982?text=Hi%20KSocial,%20I'm%20interested%20in%20a%20Discovery%20Call." 
-   class="btn btn-primary" 
-   style="background-color: #25d366; border: none;" text-align: center, margin: 0.5 auto>
-   Chat on WhatsApp </a>
+				<a href="https://wa.me/601153989982" class="btn" style="background-color: #25d366; color: white; border: none;">
+        			<i data-lucide="message-circle" style="vertical-align: middle; margin-right: 8px;"></i>
+        			Chat on WhatsApp
+    </a>
+</div>
             </form>
         </div>
     </section>
@@ -543,6 +563,7 @@ nav {
 </body>
 
 </html>
+
 
 
 
