@@ -102,6 +102,21 @@ nav {
         .section-title h2 { font-size: 2.5rem; margin-bottom: 1rem; font-weight: 800; }
         .bar { width: 60px; height: 4px; background: var(--primary); margin: 0 auto; }
 
+		/* Company Name label next to logo - Ksocial Marketing */
+		.company-name {
+		color: var(--primary); /* Uses your turquoise theme color */
+		font-size: 1.5rem;
+		font-weight: 800;
+		letter-spacing: -0.5px;
+		text-transform: uppercase;
+		font-family: 'Inter', sans-serif;
+		}
+	
+		/* Ensure the logo and text don't shrink on mobile */
+		.logo-container a {
+		white-space: nowrap;
+		}
+		
         /* --- INTERACTIVE SERVICES SECTION --- */
         .service-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; max-width: 1200px; margin: 0 auto; }
         .service-card { flex: 1 1 350px; background: #1e293b; border-radius: 20px; border: 1px solid #334155; transition: 0.4s; overflow: hidden; position: relative; }
@@ -155,6 +170,7 @@ nav {
 	}
 		
     </style>
+	
 </head>
 <body>
 
@@ -165,7 +181,12 @@ nav {
   <nav>
     <div class="logo-container">
         <img src="Ksocial Transparent Logo.png" alt="Ksocial Logo" class="logo-img">
-    </div>
+  		
+		<a href="/" style="display: flex; align-items: center; gap: 15px; text-decoration: none;">
+        <img src="Logo Ksocial Png.png" alt="Ksocial Logo" class="logo-img">
+        <span class="company-name">KSOCIAL MARKETING</span>
+    </a>
+</div>
     
     <div class="nav-links">
         <a href="#services">Services</a>
@@ -563,6 +584,7 @@ nav {
 </body>
 
 </html>
+
 
 
 
